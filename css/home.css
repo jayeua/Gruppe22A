@@ -1,0 +1,158 @@
+/* Home Page Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0c0f16;
+    color: #ffffff;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 20px 20px; /* reduced from 40–60px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    background: #0f131b;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+
+header .logo {
+    font-size: 24px;
+    color: #37ff8b;
+    font-weight: 700;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+header nav a:hover {
+    color: #37ff8b;
+}
+
+/* HERO */
+.hero {
+    padding: 150px 60px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    max-width: 450px;
+    font-size: 16px;
+    margin: 20px 0 30px;
+    color: #cfcfcf;
+}
+
+.btn {
+    padding: 14px 24px;
+    background: #37ff8b;
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #24cef8cc;
+}
+
+/* SKILLS */
+.skills {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill-box {
+    background: #11151f;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #1e2633;
+}
+
+.skill-box h3 {
+    color: #37ff8b;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    header nav {
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+}
+
+.hero-text {
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-image img {
+    animation: popIn 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
